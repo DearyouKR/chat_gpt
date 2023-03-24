@@ -4,7 +4,7 @@ RUN mkdir /code
 WORKDIR /code
 RUN pip install --upgrade pip
 COPY requirements.txt /code/
-
+RUN apt-get update
 RUN pip install -r requirements.txt
 COPY . /code/
 
